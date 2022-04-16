@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int m,n,lcm,i,max;
+    int m,n,max,lcm,i;
     scanf("%d%d",&m,&n);
     max=m>n?m:n;
     lcm=max;
@@ -14,5 +14,4 @@ int main()
         }
     }
     printf("%d",lcm);
-    return 0;
 }

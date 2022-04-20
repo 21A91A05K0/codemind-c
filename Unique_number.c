@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,d,x[100],j,k,i=0,c=0,s=0;
+    int n,i=0,j,k,d,x[100],c=0,s=0;
     scanf("%d",&n);
     while(n!=0)
     {
@@ -12,14 +12,12 @@ int main()
     }
     for(j=0;j<i;j++)
     {
-
         for(k=0;k<i;k++)
         {
-                if(x[j]==x[k])
-                {
-                    c++;
-                
-                }
+            if(x[j]==x[k])
+            {
+                c++;
+            }
         }
     }
     if(c==i)

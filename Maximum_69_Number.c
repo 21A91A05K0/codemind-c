@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i=0,d[100],j;
+    int k,j,i=0,n,d[100];
     scanf("%d",&n);
     while(n>0)
     {
@@ -9,7 +9,7 @@ int main()
         n=n/10;
         i++;
     }
-    for(j=i-1;j>=0;j--)
+    for(j=i-1;j>=n;j--)
     {
         if(d[j]==6)
         {
@@ -17,8 +17,9 @@ int main()
             break;
         }
     }
-    for(int k=i-1;k>=0;k--)
+    for(k=i-1;k>=n;k--)
     {
         printf("%d",d[k]);
     }
+    return 0;
 }

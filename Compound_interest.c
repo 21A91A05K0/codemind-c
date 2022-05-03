@@ -2,7 +2,7 @@
 #include<math.h>
 int main()
 {
-    double p,t,r,ci;
+    double p,r,t,ci;
     scanf("%lf",&p);
     scanf("%lf",&r);
     scanf("%lf",&t);

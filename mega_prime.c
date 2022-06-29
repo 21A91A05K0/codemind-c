@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int i,n,t,c=0,s=0,d,l=0;
+    int i,n,t,c=0,d,s=0,l=0;
     scanf("%d",&n);
     t=n;
     for(i=1;i<=n;i++)
@@ -23,7 +23,7 @@ int main()
             {
                 if(d%i==0)
                 {
-                    k++;
+                   k++; 
                 }
             }
             if(k==2)

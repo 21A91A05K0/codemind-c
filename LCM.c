@@ -1,11 +1,10 @@
-#include<stdio.h>
+# include<stdio.h>
 int main()
 {
-    int m,n,max,lcm,i;
-    scanf("%d%d",&m,&n);
-    max=m>n?m:n;
-    lcm=max;
-    for(i=max;;i=i+max)
+    int min,n,m,lcm,i;
+    scanf("%d%d",&n,&m);
+    min=m>n?n:m;
+    for(i=min;;i+=min)
     {
         if(i%m==0&&i%n==0)
         {
@@ -14,4 +13,5 @@ int main()
         }
     }
     printf("%d",lcm);
+    return 0;
 }

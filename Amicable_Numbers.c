@@ -1,23 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n,m,i,s=0,c=0;
-    scanf("%d%d",&n,&m);
-    for(i=1;i<n;i++)
+    long long int a,b,sum=0,i;
+    scanf("%lld%lld",&a,&b);
+    for(i=1;i<a;i++)
     {
-        if(n%i==0)
+        if(a%i==0)
         {
-            s=s+i;
+            sum=sum+i;
         }
     }
-    for(i=1;i<m;i++)
-    {
-        if(m%i==0)
-        {
-            c=c+i;
-        }
-    }
-    if(c==n && s==m)
+    if(sum==b)
     {
         printf("Amicable");
     }
@@ -25,4 +18,5 @@ int main()
     {
         printf("Not Amicable");
     }
+    return 0;
 }

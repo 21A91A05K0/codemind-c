@@ -1,21 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int sum=0,first=0,second=1,n,i;
+    int n,i,a[100];
     scanf("%d",&n);
+    a[0]=0;
+    a[1]=1;
+    for(i=1;i<n+1;i++)
+    {
+        a[i+1]=a[i]+a[i-1];
+    }
     for(i=0;i<n;i++)
     {
-        if(i<=1)
-        {
-            sum=i;
-        }
-        else
-        {
-            sum=first+second;
-            first=second;
-            second=sum;
-        }
-        printf("%d ",sum);
+        printf("%d ",a[i]);
     }
-    return 0;
 }

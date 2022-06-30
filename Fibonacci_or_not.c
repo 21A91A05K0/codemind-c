@@ -1,11 +1,11 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,c,next,n;
+    int n,a,b,c,next;
     scanf("%d",&n);
     if((n==0) || (n==1))
     {
-        printf("True");
+        printf("%d",n);
     }
     else
     {
@@ -18,14 +18,14 @@ int main()
             b=c;
             c=a+b;
         }
-        if(c==n)
-        {
-            printf("True");
-        }
-        else
-        {
-            printf("False");
-        }
     }
-return 0;
+    if(c==n)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+    return 0;
 }

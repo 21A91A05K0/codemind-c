@@ -2,12 +2,12 @@
 int isUgly(int n)
 {
     if(n==1)
-     return 1;
+       return 1;
     if(n<=0)
-     return 0;
+       return 0;
     if(n%2==0)
     {
-        return (isUgly(n/2));
+        return(isUgly(n/2));
     }
     if(n%3==0)
     {
@@ -21,9 +21,9 @@ int isUgly(int n)
 }
 int main()
 {
-    int no,k;
-    scanf("%d",&no);
-    k=isUgly(no);
+    int num,k;
+    scanf("%d",&num);
+    k=isUgly(num);
     if(k==1)
     {
         printf("Ugly Number");

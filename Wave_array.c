@@ -1,17 +1,31 @@
 #include<stdio.h>
 int main()
 {
-    int n,arr[100],i;
+    int n,s=0,i=0,a[100],c=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
-    scanf("%d",&arr[i]);
-    for(i=0;i<n-2;i++)
     {
-        if((arr[i]>arr[i+1] && arr[i+1]>arr[i+2])||(arr[i]<arr[i+1] &&arr[i+1]<arr[i+2]))
-        {
-            printf("no");
-            return 0;
-        }
+        scanf("%d",&a[i]);
     }
-    printf("yes");
+    i=0;
+    while(i<n)
+    {
+        if(a[i]<a[i+1])
+        {
+            s=s+1;
+        }
+        if(a[i]>a[i+1])
+        {
+            c=c+1;
+        }
+        i=i+2;
+    }
+    if(s==n/2 or c==n/2)
+    {
+        printf("yes");
+    }
+    else
+    {
+        printf("no");
+    }
 }

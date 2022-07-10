@@ -1,29 +1,26 @@
 #include<stdio.h>
-int digit(int);
-int digit(int a)
-{
-    int d,dc=0;
-    if(a==0)
-    return 1;
-    while(a)
-    {
-        d=a%10;
-        dc++;
-        a/=10;
-    }
-    return dc;
-}
 int main()
 {
-    int n,a[100],i,c;
+    int n,i,a[100],c,d,t;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
     }
-    for(i=0;i<n;i++)
+    for(i=0;i<=n-1;i++)
     {
-        c=digit(a[i]);
+        c=0;
+        t=a[i];
+        while(t!=0)
+        {
+            c++;
+            d=t%10;
+            t=t/10;
+        }
+        if(a[i]==0)
+        {
+            c=1;
+        }
         printf("%d ",c);
     }
 }
